@@ -1,0 +1,29 @@
+$hover-radio: 1.2;
+
+@media screen {
+  // hover brightness
+  .hover-light-0:hover {
+    filter: brightness(1);
+  }
+  .hover-light-1:hover {
+    filter: brightness(1 * $hover-radio);
+  }
+  .hover-light-2:hover {
+    filter: brightness(3 * $hover-radio);
+  }
+  .hover-light-3:hover {
+    filter: brightness(5 * $hover-radio);
+  }
+  .hover-light-4:hover {
+    filter: brightness(7 * $hover-radio);
+  }
+  .hover-light-5:hover {
+    filter: brightness(9 * $hover-radio);
+  }
+}
+
+@media screen {
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}

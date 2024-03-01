@@ -7,7 +7,7 @@
       >
         <!-- menu section -->
         <section class="d-flex flex-column text-light border-light">
-          <menu-section-component @showFrame="showFrame"/>
+          <menu-section-component @showFrame="showFrame" />
         </section>
 
         <!-- seprator -->
@@ -30,6 +30,7 @@
           @closeFrame="closeFrame()"
         >
           <projects-frame-component v-if="frameComponent.component == 'projects'" />
+          <about-frame-component v-if="frameComponent.component == 'about'" />
         </frame-component>
       </div>
     </main>
@@ -51,6 +52,7 @@ import MenuSectionComponent from "../components/menu_section/MenuSectionComponen
 import MainSectionComponent from "../components/main_section/MainSectionComponent.vue";
 import FrameComponent from "../components/frame/FrameComponent.vue";
 import ProjectsFrameComponent from "../components/projects_frame/ProjectsFrameComponent.vue";
+import AboutFrameComponent from "../components/about_frame/AboutFrameComponent.vue";
 
 export default {
   components: {
@@ -59,11 +61,12 @@ export default {
     MainSectionComponent,
     FrameComponent,
     ProjectsFrameComponent,
+    AboutFrameComponent,
   },
   data() {
     return {
       frameComponent: {
-        isHidden: false,
+        isHidden: true,
         title: "FRAME_TITLE",
         component: null,
         components: {

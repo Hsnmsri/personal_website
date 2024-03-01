@@ -3,7 +3,7 @@
     <main
       class="w-100 h-100"
     >
-      <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100">
+      <div class="d-none flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100">
         <!-- menu section -->
         <section class="d-flex flex-column text-light border-light">
           <menu-section-component />
@@ -17,6 +17,23 @@
           <main-section-component />
         </section>
       </div>
+
+      <!-- frames -->
+      <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100">
+        <frame-component frameTitle="asldkfjasdf" :isHidden="false" @closeFrame="closeFrame()">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
+          </p>
+        </frame-component>
+      </div>
+
     </main>
 
     <footer
@@ -33,12 +50,19 @@
 import CopyrightComponent from "../components/copyright/CopyrightComponent.vue";
 import MenuSectionComponent from "../components/menu_section/MenuSectionComponent.vue";
 import MainSectionComponent from "../components/main_section/MainSectionComponent.vue";
+import FrameComponent from "../components/frame/FrameComponent.vue"
 export default {
   components: {
     CopyrightComponent,
     MenuSectionComponent,
     MainSectionComponent,
+    FrameComponent
   },
+    methods: {
+        closeFrame(){
+            alert("frame closed!");
+        }
+    },
 };
 </script>
 

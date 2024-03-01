@@ -1,0 +1,14 @@
+@media screen {
+    .frame-component{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .frame-component{
+        width: unset;
+        max-width: 40%;
+        height: unset;
+        max-height: 70%;
+    }
+}

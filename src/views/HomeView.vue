@@ -1,12 +1,13 @@
 <template>
   <div class="bg-dark w-100 h-100">
-    <main
-      class="w-100 h-100"
-    >
-      <div class="d-none flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100">
+    <main class="w-100 h-100">
+      <div
+        class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100"
+        :class="frameComponent.isHidden ? 'd-flex' : 'd-none'"
+      >
         <!-- menu section -->
         <section class="d-flex flex-column text-light border-light">
-          <menu-section-component />
+          <menu-section-component @showFrame="showFrame"/>
         </section>
 
         <!-- seprator -->
@@ -19,25 +20,23 @@
       </div>
 
       <!-- frames -->
-      <div class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100">
-        <frame-component frameTitle="asldkfjasdf" :isHidden="false" @closeFrame="closeFrame()">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel minima alias asperiores doloremque perspiciatis ex fuga tempore eligendi suscipit nostrum magni eius mollitia molestias, impedit officiis cum quam id.
-          </p>
+      <div
+        class="d-flex flex-column-reverse flex-lg-row align-items-center justify-content-center w-100 h-100"
+        :class="frameComponent.isHidden ? 'd-none' : 'd-flex'"
+      >
+        <frame-component
+          :frameTitle="frameComponent.title"
+          :isHidden="frameComponent.isHidden"
+          @closeFrame="closeFrame()"
+        >
+          <projects-frame-component v-if="frameComponent.component == 'projects'" />
         </frame-component>
       </div>
-
     </main>
 
     <footer
       class="w-100 mb-4 d-flex justify-content-center position-fixed bottom-0 start-0"
+      v-if="frameComponent.isHidden"
     >
       <div class="px-3">
         <copyright-component />
@@ -50,19 +49,50 @@
 import CopyrightComponent from "../components/copyright/CopyrightComponent.vue";
 import MenuSectionComponent from "../components/menu_section/MenuSectionComponent.vue";
 import MainSectionComponent from "../components/main_section/MainSectionComponent.vue";
-import FrameComponent from "../components/frame/FrameComponent.vue"
+import FrameComponent from "../components/frame/FrameComponent.vue";
+import ProjectsFrameComponent from "../components/projects_frame/ProjectsFrameComponent.vue";
+
 export default {
   components: {
     CopyrightComponent,
     MenuSectionComponent,
     MainSectionComponent,
-    FrameComponent
+    FrameComponent,
+    ProjectsFrameComponent,
   },
-    methods: {
-        closeFrame(){
-            alert("frame closed!");
-        }
+  data() {
+    return {
+      frameComponent: {
+        isHidden: false,
+        title: "FRAME_TITLE",
+        component: null,
+        components: {
+          projects: {
+            isHidden: true,
+            title: "Projects",
+          },
+          about: {
+            isHidden: true,
+            title: "About Me",
+          },
+          resume: {
+            isHidden: true,
+            title: "My Resume",
+          },
+        },
+      },
+    };
+  },
+  methods: {
+    closeFrame() {
+      this.frameComponent.isHidden = true;
     },
+    showFrame(componentKey) {
+      this.frameComponent.isHidden = false;
+      this.frameComponent.title = this.frameComponent.components[componentKey].title;
+      this.frameComponent.component = componentKey;
+    },
+  },
 };
 </script>
 
@@ -74,6 +104,7 @@ export default {
     background: radial-gradient(circle, #f58b00, #141414 70%);
   }
 }
+
 @media (min-width: 992px) {
   #seprator {
     width: 2px;

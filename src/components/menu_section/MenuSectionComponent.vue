@@ -1,6 +1,7 @@
 <template>
   <div
     class="d-flex align-items-center justify-content-end text-secondary mb-3 mb-lg-4 hover-light-5 cursor-pointer"
+    @click="$emit('showFrame','projects')"
   >
     <div class="px-3">
       <span>Projects</span>
@@ -17,6 +18,7 @@
 
   <div
     class="d-flex align-items-center justify-content-end text-secondary mb-3 mb-lg-4 hover-light-5 cursor-pointer"
+    @click="$emit('showFrame','about')"
   >
     <div class="px-3">
       <span>About Me</span>
@@ -33,6 +35,7 @@
 
   <div
     class="d-flex align-items-center justify-content-end text-secondary mb-3 mb-lg-4 hover-light-5 cursor-pointer"
+    @click="$emit('showFrame','resume')"
   >
     <div class="px-3">
       <span>My Resume</span>
@@ -47,8 +50,10 @@
     </div>
   </div>
 
-  <div
-    class="d-flex align-items-center justify-content-end text-secondary mb-3 mb-lg-4 hover-light-5 cursor-pointer"
+  <a
+  href="https://github.com/hsnmsri"
+  target="_blank"
+    class="d-flex text-decoration-none align-items-center justify-content-end text-secondary mb-3 mb-lg-4 hover-light-5 cursor-pointer"
   >
     <div class="px-3">
       <span>Github</span>
@@ -61,5 +66,5 @@
         <i class="bi bi-github"></i>
       </div>
     </div>
-  </div>
+  </a>
 </template>

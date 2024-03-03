@@ -31,6 +31,7 @@
         >
           <projects-frame-component v-if="frameComponent.component == 'projects'" />
           <about-frame-component v-if="frameComponent.component == 'about'" />
+          <resume-frame-component v-if="frameComponent.component == 'resume'" />
         </frame-component>
       </div>
     </main>
@@ -53,6 +54,7 @@ import MainSectionComponent from "../components/main_section/MainSectionComponen
 import FrameComponent from "../components/frame/FrameComponent.vue";
 import ProjectsFrameComponent from "../components/projects_frame/ProjectsFrameComponent.vue";
 import AboutFrameComponent from "../components/about_frame/AboutFrameComponent.vue";
+import ResumeFrameComponent from "../components/resume_frame/ResumeFrameComponent.vue";
 
 export default {
   components: {
@@ -62,6 +64,7 @@ export default {
     FrameComponent,
     ProjectsFrameComponent,
     AboutFrameComponent,
+    ResumeFrameComponent
   },
   data() {
     return {

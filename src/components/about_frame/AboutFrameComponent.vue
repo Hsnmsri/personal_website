@@ -45,7 +45,7 @@
           </a>
           <a
             target="_blank"
-            href="mailto:hsnmsri82@gmail.com"
+            href="mailto:info@mrmansouri.ir"
             class="btn rounded-0 text-light"
           >
             <i class="bi bi-envelope-at"></i>
@@ -55,9 +55,38 @@
     </div>
 
     <div class="col-12 mt-3">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nisi dolore rerum
-      suscipit quibusdam officia architecto neque aut at perferendis repudiandae nulla nam
-      vitae deleniti, sunt dolorem tempore quaerat pariatur!
+      Hello! I'm a passionate Full Stack Developer with a relentless drive and a deep
+      commitment to mastering the art of coding. Every day, I immerse myself in the
+      challenge of learning and pushing the boundaries of what I can create with code. My
+      journey in the tech world has been marked by several personal projects and
+      collaborations that have allowed me to fine-tune my skills and adapt to various
+      challenges, making custom solutions my forte.
+      <br />
+      <br />
+      Beyond my technical endeavors, I have a profound love for reading. Books open up
+      worlds beyond my immediate surroundings and fuel my creativity, often inspiring my
+      approach to problem-solving in development. While many find their escape in gaming,
+      I find my greatest joy in coding and creating. The process of bringing an idea to
+      life through code is what I prefer over any game.
+      <br />
+      <br />
+      I pride myself on my ability to work tirelessly. My dedication to my craft means
+      that I'm always on the lookout for new techniques and technologies that can enhance
+      my work. This dedication has not only been a personal journey but has also led me to
+      contribute to several team projects. Through these collaborations, I've learned the
+      importance of teamwork, adaptability, and the sharing of ideas to achieve a common
+      goal.
+      <br />
+      <br />
+      As a developer, my goal is not just to write code, but to create solutions that make
+      a difference. Whether it's through my own projects or as part of a team, I'm always
+      looking to push the envelope and deliver high-quality, impactful work.
+      <br />
+      <br />
+      If you're looking for a developer who combines passion with perseverance, creativity
+      with dedication, and a constant drive for excellence, let's connect. I'm eager to
+      bring my skills to your projects and together, we can create something truly
+      remarkable.
     </div>
   </div>
 </template>

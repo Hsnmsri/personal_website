@@ -64,7 +64,7 @@ export default {
     FrameComponent,
     ProjectsFrameComponent,
     AboutFrameComponent,
-    ResumeFrameComponent
+    ResumeFrameComponent,
   },
   data() {
     return {
@@ -108,6 +108,15 @@ export default {
     height: 2px;
     width: 70%;
     background: radial-gradient(circle, #f58b00, #141414 70%);
+    animation: SepratorSMAnim 800ms;
+  }
+  @keyframes SepratorSMAnim {
+    from {
+      transform: scale(0.3);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 }
 

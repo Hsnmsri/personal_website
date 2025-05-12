@@ -1,0 +1,15 @@
+{
+  // Point to your Tailwind config if it's nonstandard:
+  "tailwindCSS.config": "./tailwind.config.js",
+  // Enable quick suggestions inside class="" strings:
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  // Map languages so IntelliSense parses class names in your HTML/TSX/SCSS:
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "typescript": "javascript",
+    "typescriptreact": "html",
+    "scss": "css"
+  }
+}

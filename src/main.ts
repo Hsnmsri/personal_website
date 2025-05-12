@@ -1,12 +1,6 @@
-import "../src/assets/style/custom.scss"
-import "bootstrap-icons/font/bootstrap-icons.min.css";
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
 
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-
-const app = createApp(App);
-
-app.use(router);
-
-app.mount("#app");
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

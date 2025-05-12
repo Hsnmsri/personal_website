@@ -1,0 +1,220 @@
+<main class="bg-dark font-jetbrains" [style]="{'height':windowSize.height}">
+
+  <!-- navigation -->
+  <div>
+    <navbar />
+  </div>
+  <!-- navigation -->
+
+  <!-- main content -->
+  <div class="w-full flex flex-col items-center bg-dark text-white pt-16">
+
+    <!-- section 1 -->
+    <div class="container flex flex-col items-center">
+
+      <!-- photo -->
+      <div class="flex items-center content-center mt-24">
+        <div class="border-2 border-primary rounded-full p-1">
+          <div class="flex items-center justify-center overflow-hidden rounded-full aspect-square h-[168px]">
+            <img src="assets/images/hossein_mansouri.jpeg" alt="hossein-mansouri">
+          </div>
+        </div>
+      </div>
+      <!-- photo -->
+
+      <!-- title -->
+      <div class="flex flex-col items-center">
+        <h2 class="text-center font-extrabold text-5xl  max-w-[650px] mt-16" style="line-height: 62px;">
+          I do code and<br>
+          make content
+          <span
+            style="background: #FF9100;background: linear-gradient(to right, #FF9100 0%, #7D2EA2 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+            about it!
+          </span>
+        </h2>
+
+        <p class="max-w-[720px] text-center mt-12 text-white text-opacity-70">
+          I’m a full-stack software engineer with hands-on experience in<br> both frontend and backend development.
+          My strength lies in building modern, scalable web applications using technologies like Angular, NestJS. <br>
+          I enjoy crafting clean code and intuitive user experiences that solve real-world problems.
+        </p>
+
+        <!-- actions -->
+        <div class="flex items-center justify-center mt-12">
+          <button class="bg-white text-dark px-5 py-2 rounded-full font-bold mx-3 hover:bg-gray-300">
+            Get In Touch
+          </button>
+          <button
+            class="bg-transparent border border-white text-white px-5 py-2 rounded-full font-bold mx-3 hover:bg-gray-300 hover:text-dark">
+            Download CV
+          </button>
+        </div>
+        <!-- actions -->
+      </div>
+      <!-- title -->
+
+    </div>
+    <!-- section 1 -->
+
+    <!-- section 2 -->
+    <div class="container flex flex-col items-center">
+
+      <!-- title -->
+      <div class="mt-20 text-white text-opacity-80">
+        <h2 class="font-bold">EXPERIENCE WITH</h2>
+      </div>
+      <!-- title -->
+
+      <!-- icons -->
+      <div class="flex items-center justify-center mt-10">
+        <img src="/assets/images/javascript.png" alt="js" class="w-[42px] mx-6">
+        <img src="../assets/images/nodejs.png" alt="js" class="w-[42px] mx-6">
+        <img src="../assets/images/html.png" alt="js" class="w-[42px] mx-6">
+        <img src="../assets/images/css.png" alt="js" class="w-[42px] mx-6">
+        <img src="../assets/images/reactjs.png" alt="js" class="w-[42px] mx-6">
+      </div>
+      <!-- icons -->
+
+      <!-- projects title -->
+      <div>
+        <h2 class="font-extrabold text-[30px] mt-20 text-primary">PROJECTS</h2>
+      </div>
+      <!-- projects title -->
+
+      <!-- project list -->
+      <div class="flex flex-wrap justify-center w-full mt-4">
+        @for (item of [].constructor(10); track $index) {
+        <div class="w-1/4 p-3 shadow-sm">
+          <div
+            class="flex flex-col rounded-2xl bg-secondary bg-opacity-10 border border-secondary border-opacity-5 overflow-hidden w-full">
+            <div class="w-full">
+              <img src="../assets/images/project-thumbnail-2.png" alt="" class="min-w-full max-h-full">
+            </div>
+            <div class="w-full flex items-center justify-between max-h-full px-6 py-3">
+              <div class="flex flex-col">
+                <small class="text-secondary">CLICK HERE TO VISIT</small>
+                <span>HTML TUTORIAL</span>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M0.770088 1.60785C0.770266 1.33366 0.88423 1.07075 1.08695 0.876872C1.28966 0.682991 1.56456 0.573995 1.85124 0.573824L10.5209 0.573825C10.8076 0.573995 11.0825 0.682991 11.2852 0.876872C11.4879 1.07075 11.6018 1.33366 11.602 1.60785L11.602 9.89958C11.592 10.1675 11.4737 10.4213 11.2721 10.6076C11.0705 10.7939 10.8012 10.8981 10.5209 10.8985C10.2405 10.8981 9.97127 10.7939 9.76965 10.6076C9.56803 10.4213 9.44977 10.1675 9.43972 9.89958L9.43972 4.10512L1.85124 11.3628C1.64836 11.5569 1.37319 11.6659 1.08628 11.6659C0.799356 11.6659 0.524189 11.5569 0.321307 11.3628C0.118425 11.1688 0.00444776 10.9056 0.0044481 10.6312C0.0044481 10.3568 0.118425 10.0936 0.321307 9.89958L7.90978 2.64188L1.85124 2.64188C1.56456 2.64171 1.28966 2.53271 1.08695 2.33883C0.88423 2.14495 0.770266 1.88204 0.770088 1.60785Z"
+                    fill="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <!-- project list -->
+
+    </div>
+    <!-- section 2 -->
+
+    <!-- section 3 -->
+    <div class="container flex flex-col items-center">
+
+      <!-- experience title -->
+      <div>
+        <h2 class="font-extrabold text-[30px] mt-20 text-[#7D2EA2]">EXPERIENCE</h2>
+      </div>
+      <!-- experience title -->
+
+      <div class="w-full flex flex-col items-center mt-24">
+
+        @for (item of [].constructor(5); track $index) {
+        <div class="flex flex-col w-full mb-5 max-w-[1100px]">
+          <div class="flex items-center justify-between w-full">
+            <div class="flex items-center">
+              <img src="/assets/images/google-logo.png" alt="google-logo" class="w-[32px] h-[32px]">
+              <h2 class="font-extrabold text-[21px] ms-4">Lead Software Engineer at Google</h2>
+            </div>
+            <span class="text-secondary">
+              Nov 2019 - Present
+            </span>
+          </div>
+          <div class="w-full py-10">
+            <p class="text-secondary">
+              As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for
+              Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the
+              enhancement of search accuracy and efficiency, optimizing user experiences for millions of users
+              worldwide.
+            </p>
+          </div>
+        </div>
+        }
+
+      </div>
+
+    </div>
+    <!-- section 3 -->
+
+    <!-- footer -->
+    <div class="w-full flex justify-center bg-secondary bg-opacity-10 py-24 mt-40">
+      <div class="container flex flex-col items-center">
+
+        <!-- title -->
+        <div class="w-full">
+          <h3 class="font-semibold text-[21px]">Contact</h3>
+        </div>
+        <!-- title -->
+
+        <!-- info -->
+        <div class="w-full">
+          <p class="max-w-[700px] mt-8 text-secondary ">
+            Experienced Full Stack Developer with a solid track record of delivering end-to-end web solutions.
+            Skilled in architecting and developing scalable, maintainable applications using modern technologies across
+            the stack.
+            Passionate about building meaningful digital experiences through clean code and thoughtful design.
+          </p>
+        </div>
+        <!-- info -->
+
+        <!-- contact detail -->
+        <div class="flex flex-col w-full">
+          <!-- email -->
+          <div class="flex items-center text-secondary mt-5">
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:hsnmsri82@gmail.com">hsnmsri82&#64;gmail.com</a>
+          </div>
+          <!-- email -->
+
+          <!-- phone number -->
+          <div class="flex items-center text-secondary mt-5">
+            <i class="bi bi-telephone me-2"></i>
+            <a href="call:+989172433226">+98 917 243 3226</a>
+          </div>
+          <!-- phone number -->
+
+          <!-- other -->
+          <div class="flex w-full">
+            <div class="flex items-center text-secondary mt-8 text-[18px]">
+              <a href="https://instagram.com/humansouri" target="_blank" class="hover:text-white">
+                <i class="bi bi-instagram"></i>
+                <span class="text-[15px] ms-2">humansouri</span>
+              </a>
+            </div>
+            <div class="flex items-center text-secondary mt-8 text-[18px] ms-3">
+              <a href="https://t.me/humansouri" target="_blank" class="hover:text-white">
+                <i class="bi bi-send"></i>
+              </a>
+            </div>
+            <div class="flex items-center text-secondary mt-8 text-[18px] ms-5">
+              <a href="https://www.linkedin.com/in/hossein-mansouri-11169a230" target="_blank" class="hover:text-white">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <!-- other -->
+        </div>
+        <!-- contact detail -->
+
+      </div>
+    </div>
+    <!-- footer -->
+
+  </div>
+  <!-- main content -->
+
+</main>

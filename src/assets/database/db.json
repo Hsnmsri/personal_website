@@ -1,0 +1,13 @@
+{
+  "projects": [{
+    "imgUrl": "/assets/images/project-thumbnail-2.png",
+    "title": "TestOne",
+    "link": "https://google.com"
+  }],
+  "experiences": [{
+    "iconUrl": "/assets/images/google-logo.png",
+    "title": "Lead Software Engineer at Google",
+    "time": "Nov 2019 - Present",
+    "description": "As a Senior Software Engineer at Google, I played a pivotal test One"
+  }]
+}

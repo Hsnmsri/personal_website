@@ -3,6 +3,13 @@
 @tailwind utilities;
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
+// Base Styles
+@media screen {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 // Jetbrain Mono Font
 @media screen {
   @font-face {

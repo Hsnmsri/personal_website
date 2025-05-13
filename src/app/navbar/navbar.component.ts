@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'navbar',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  menuVisibility: boolean = false;
 
+  constructor() {
+    this.checkMenuVisibility();
+  }
+
+  @HostListener('window:resize')
+  checkMenuVisibility() {
+    this.menuVisibility = window.innerWidth > 768
+  }
 }

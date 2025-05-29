@@ -1,7 +1,7 @@
-<div class="backdrop-blur-sm fixed top-0 left-0 w-full">
+<header class="backdrop-blur-sm fixed top-0 left-0 w-full">
 
   <!-- navbar -->
-  <div class="flex justify-center w-full py-5 text-white bg-secondary bg-opacity-10">
+  <nav class="flex justify-center w-full py-5 text-white bg-secondary bg-opacity-10">
     <div class="container flex flex-col md:flex-row items-center justify-between w-full px-5 md:px-0">
 
       <div class="flex items-center justify-between w-full md:w-auto">
@@ -30,18 +30,26 @@
       </div>
 
       <!-- menu container -->
-      <div
+      <ul
         class="flex flex-col md:items-center w-full md:flex-row md:w-auto overflow-hidden transition-[max-height] duration-700 ease-in-out md:max-h-full"
         [class]="{'max-h-0': !menuVisibility,'max-h-[400px]': menuVisibility}">
-        <a href="#home" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary mt-2 md:mt-0">Home</a>
-        <a href="#projects" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary">Projects</a>
-        <a href="#experience" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary">Experience</a>
-        <a href="#contact" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary">Contact</a>
-      </div>
+        <li>
+          <a href="#home" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary mt-2 md:mt-0">Home</a>
+        </li>
+        <li>
+          <a href="#projects" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary">Projects</a>
+        </li>
+        <li>
+          <a href="#experience" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary">Experience</a>
+        </li>
+        <li>
+          <a href="#contact" class="mx-6 cursor-pointer pt-3 md:pt-0 hover:text-primary">Contact</a>
+        </li>
+      </ul>
       <!-- menu container -->
 
     </div>
-  </div>
+  </nav>
   <!-- navbar -->
 
-</div>
+</header>

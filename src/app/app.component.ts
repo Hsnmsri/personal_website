@@ -16,6 +16,7 @@ export class AppComponent {
   windowSize: WindowSize = { width: '100%', height: '100%' };
   backToTopVisibility: boolean = false;
   database: Database = { experiences: [], projects: [] };
+  nowDate: Date = new Date();
 
   constructor() {
     this.onResize();

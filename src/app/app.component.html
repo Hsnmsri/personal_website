@@ -1,5 +1,8 @@
 <main class="bg-dark font-jetbrains" [style]="{'height':windowSize.height}">
 
+  <h1 class="absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden whitespace-nowrap border-0"
+    style="clip: rect(0, 0, 0, 0);">Hossein Mansouri – Full-Stack Developer</h1>
+
   <!-- navigation -->
   <div>
     <navbar />
@@ -10,13 +13,13 @@
   <div class="w-full flex flex-col items-center bg-dark text-white pt-16" id="home">
 
     <!-- section 1 -->
-    <div class="container flex flex-col items-center px-5 md:px-0">
+    <section class="container flex flex-col items-center px-5 md:px-0">
 
       <!-- photo -->
       <div class="flex items-center content-center mt-24">
         <div class="border-2 border-primary rounded-full p-1">
           <div class="flex items-center justify-center overflow-hidden rounded-full aspect-square h-[168px]">
-            <img src="assets/images/hossein_mansouri.jpeg" alt="hossein-mansouri">
+            <img src="assets/images/hossein_mansouri.jpeg" alt="hossein-mansouri" title="Hossein Mansouri">
           </div>
         </div>
       </div>
@@ -24,17 +27,17 @@
 
       <!-- title -->
       <div class="flex flex-col items-center">
-        <span class="text-lg mt-6 text-secondary">Hey there,<br> I'm <span class="font-bold text-white text-xl">Hossein
-            Mansouri</span></span>
+        <h3 class="text-lg mt-6 text-secondary">Hey there,<br> I'm <span class="font-bold text-white text-xl">Hossein
+            Mansouri</span></h3>
 
-        <h2 class="text-center font-extrabold text-5xl  max-w-[650px] mt-10" style="line-height: 62px;">
+        <p class="text-center font-extrabold text-5xl  max-w-[650px] mt-10" style="line-height: 62px;">
           I do code and<br>
           make content
           <span
             style="background: #FF9100;background: linear-gradient(to right, #FF9100 0%, #7D2EA2 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
             about it!
           </span>
-        </h2>
+        </p>
 
         <p class="max-w-[300px] md:max-w-[720px] text-center mt-12 text-white text-opacity-70"
           [class]="isMobile && !descriptionFullVisibility?'overflow-hidden text-ellipsis whitespace-nowrap':null"
@@ -62,121 +65,127 @@
       </div>
       <!-- title -->
 
-    </div>
+    </section>
     <!-- section 1 -->
 
     <!-- section 2 -->
-    <div class="container flex flex-col items-center px-5 md:px-0" id="projects">
+    <section class="container flex flex-col items-center px-5 md:px-0" id="projects">
 
       <!-- title -->
       <div class="mt-20 text-white text-opacity-80">
-        <h2 class="font-bold">EXPERIENCE WITH</h2>
+        <h2 class="font-bold uppercase">Experience with</h2>
       </div>
       <!-- title -->
 
       <!-- icons -->
-      <div class="flex flex-wrap items-center justify-center mt-10">
-        <div class="w-1/3 md:w-auto flex items-center justify-center">
-          <img src="/assets/images/javascript.png" alt="js" class="w-[42px] mx-6">
-        </div>
+      <ul class="flex flex-wrap items-center justify-center mt-10">
+        <li class="w-1/3 md:w-auto flex items-center justify-center">
+          <img src="/assets/images/javascript.png" alt="javascript" class="w-[42px] mx-6">
+        </li>
 
-        <div class="w-1/3 md:w-auto flex items-center justify-center">
-          <img src="../assets/images/nodejs.png" alt="js" class="w-[42px] mx-6">
-        </div>
+        <li class="w-1/3 md:w-auto flex items-center justify-center">
+          <img src="../assets/images/nodejs.png" alt="nodejs" class="w-[42px] mx-6">
+        </li>
 
-        <div class="w-1/3 md:w-auto flex items-center justify-center">
-          <img src="../assets/images/html.png" alt="js" class="w-[42px] mx-6">
-        </div>
+        <li class="w-1/3 md:w-auto flex items-center justify-center">
+          <img src="../assets/images/html.png" alt="html" class="w-[42px] mx-6">
+        </li>
 
-        <div class="w-1/3 md:w-auto flex items-center justify-center mt-6 md:mt-0">
-          <img src="../assets/images/css.png" alt="js" class="w-[42px] mx-6">
-        </div>
+        <li class="w-1/3 md:w-auto flex items-center justify-center mt-6 md:mt-0">
+          <img src="../assets/images/css.png" alt="css" class="w-[42px] mx-6">
+        </li>
 
-        <div class="w-1/3 md:w-auto flex items-center justify-center mt-6 md:mt-0">
-          <img src="../assets/images/reactjs.png" alt="js" class="w-[42px] mx-6">
-        </div>
-      </div>
+        <li class="w-1/3 md:w-auto flex items-center justify-center mt-6 md:mt-0">
+          <img src="../assets/images/reactjs.png" alt="reactjs" class="w-[42px] mx-6">
+        </li>
+      </ul>
       <!-- icons -->
 
       <!-- projects title -->
       <div>
-        <h2 class="font-extrabold text-[30px] mt-20 text-primary">PROJECTS</h2>
+        <h2 class="font-extrabold text-[30px] mt-20 text-primary uppercase">Projects</h2>
       </div>
       <!-- projects title -->
 
       <!-- project list -->
-      <div class="flex flex-wrap justify-center w-full mt-4">
-        @for (project of database.projects; track $index) {
-        <div class="w:full md:w-1/4  p-3 shadow-sm">
-          <a [href]="project.link" target="_blank"
-            class="flex flex-col rounded-2xl bg-secondary bg-opacity-10 border border-secondary border-opacity-5 overflow-hidden w-full">
-            <div class="w-full">
-              <img [src]="project.imgUrl" alt="" class="min-w-full max-h-full">
-            </div>
-            <div class="w-full flex items-center justify-between max-h-full px-6 py-3">
-              <div class="flex flex-col">
-                <small class="text-secondary">CLICK HERE TO VISIT</small>
-                <span>{{ project.title }}</span>
+      <article class="w-full">
+        <h2 class="absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden whitespace-nowrap border-0"
+          style="clip: rect(0, 0, 0, 0);">Projects</h2>
+        <ul class="flex flex-wrap justify-center w-full mt-4">
+          @for (project of database.projects; track $index) {
+          <li class="w:full md:w-1/4  p-3 shadow-sm">
+            <a [href]="project.link" target="_blank"
+              class="flex flex-col rounded-2xl bg-secondary bg-opacity-10 border border-secondary border-opacity-5 overflow-hidden w-full">
+              <div class="w-full">
+                <img [src]="project.imgUrl" [alt]="project.title.replaceAll(' ','-').toLowerCase()"
+                  [title]="project.title" class="min-w-full max-h-full">
               </div>
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path
-                    d="M0.770088 1.60785C0.770266 1.33366 0.88423 1.07075 1.08695 0.876872C1.28966 0.682991 1.56456 0.573995 1.85124 0.573824L10.5209 0.573825C10.8076 0.573995 11.0825 0.682991 11.2852 0.876872C11.4879 1.07075 11.6018 1.33366 11.602 1.60785L11.602 9.89958C11.592 10.1675 11.4737 10.4213 11.2721 10.6076C11.0705 10.7939 10.8012 10.8981 10.5209 10.8985C10.2405 10.8981 9.97127 10.7939 9.76965 10.6076C9.56803 10.4213 9.44977 10.1675 9.43972 9.89958L9.43972 4.10512L1.85124 11.3628C1.64836 11.5569 1.37319 11.6659 1.08628 11.6659C0.799356 11.6659 0.524189 11.5569 0.321307 11.3628C0.118425 11.1688 0.00444776 10.9056 0.0044481 10.6312C0.0044481 10.3568 0.118425 10.0936 0.321307 9.89958L7.90978 2.64188L1.85124 2.64188C1.56456 2.64171 1.28966 2.53271 1.08695 2.33883C0.88423 2.14495 0.770266 1.88204 0.770088 1.60785Z"
-                    fill="white" />
-                </svg>
+              <div class="w-full flex items-center justify-between max-h-full px-6 py-3">
+                <div class="flex flex-col">
+                  <small class="text-secondary">CLICK HERE TO VISIT</small>
+                  <h3>{{ project.title }}</h3>
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M0.770088 1.60785C0.770266 1.33366 0.88423 1.07075 1.08695 0.876872C1.28966 0.682991 1.56456 0.573995 1.85124 0.573824L10.5209 0.573825C10.8076 0.573995 11.0825 0.682991 11.2852 0.876872C11.4879 1.07075 11.6018 1.33366 11.602 1.60785L11.602 9.89958C11.592 10.1675 11.4737 10.4213 11.2721 10.6076C11.0705 10.7939 10.8012 10.8981 10.5209 10.8985C10.2405 10.8981 9.97127 10.7939 9.76965 10.6076C9.56803 10.4213 9.44977 10.1675 9.43972 9.89958L9.43972 4.10512L1.85124 11.3628C1.64836 11.5569 1.37319 11.6659 1.08628 11.6659C0.799356 11.6659 0.524189 11.5569 0.321307 11.3628C0.118425 11.1688 0.00444776 10.9056 0.0044481 10.6312C0.0044481 10.3568 0.118425 10.0936 0.321307 9.89958L7.90978 2.64188L1.85124 2.64188C1.56456 2.64171 1.28966 2.53271 1.08695 2.33883C0.88423 2.14495 0.770266 1.88204 0.770088 1.60785Z"
+                      fill="white" />
+                  </svg>
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-        }
-      </div>
+            </a>
+          </li>
+          }
+        </ul>
+      </article>
       <!-- project list -->
 
-    </div>
+    </section>
     <!-- section 2 -->
 
     <!-- section 3 -->
-    <div class="container flex flex-col items-center px-6 md:px-0" id="experience">
+    <section class="container flex flex-col items-center px-6 md:px-0" id="experience">
 
       <!-- experience title -->
       <div>
-        <h2 class="font-extrabold text-[30px] mt-20 text-[#7D2EA2]">EXPERIENCE</h2>
+        <h2 class="font-extrabold text-[30px] mt-20 text-[#7D2EA2] uppercase">Experience</h2>
       </div>
       <!-- experience title -->
 
       <div class="w-full flex flex-col items-center mt-24">
 
         @for (experience of database.experiences; track $index) {
-        <div class="flex flex-col w-full mb-5 max-w-[1100px]">
+        <article class="flex flex-col w-full mb-5 max-w-[1100px]" [title]="experience.title">
           <div class="flex flex-col md:flex-row md:items-center justify-between w-full">
             <div class="flex items-center">
-              <img [src]="experience.iconUrl" alt="google-logo" class="w-[32px] h-[32px]">
-              <h2 class="font-extrabold text-[21px] ms-4">{{ experience.title }}</h2>
+              <img [src]="experience.iconUrl" [alt]="experience.title.replaceAll(' ', '-').toLowerCase()"
+                class="w-[32px] h-[32px]">
+              <h3 class="font-extrabold text-[21px] ms-4">{{ experience.title }}</h3>
             </div>
-            <span class="text-secondary">
+            <time class="text-secondary">
               {{ experience.time }}
-            </span>
+            </time>
           </div>
           <div class="w-full py-10">
             <p class="text-secondary">
               {{ experience.description }}
             </p>
           </div>
-        </div>
+        </article>
         }
 
       </div>
 
-    </div>
+    </section>
     <!-- section 3 -->
 
     <!-- footer -->
-    <div class="w-full flex justify-center bg-secondary bg-opacity-10 py-10 mt-20 md:py-24 md:mt-40" id="contact">
+    <footer class="w-full flex justify-center bg-secondary bg-opacity-10 py-10 mt-20 md:py-24 md:mt-40" id="contact">
       <div class="container flex flex-col items-center px-6 md:px-0">
 
         <!-- title -->
         <div class="w-full">
-          <h3 class="font-semibold text-[21px]">Contact</h3>
+          <h2 class="font-semibold text-[21px]">Contact</h2>
         </div>
         <!-- title -->
 
@@ -225,13 +234,19 @@
                 <i class="bi bi-linkedin"></i>
               </a>
             </div>
+
+            <div class="flex items-center text-secondary text-opacity-50 mt-8 text-[18px] ms-10">
+              <p>
+                &copy; {{nowDate.getFullYear()}} Hossein Mansouri
+              </p>
+            </div>
           </div>
           <!-- other -->
         </div>
         <!-- contact detail -->
 
       </div>
-    </div>
+    </footer>
     <!-- footer -->
 
   </div>

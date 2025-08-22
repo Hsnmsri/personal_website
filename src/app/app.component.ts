@@ -1,40 +1,61 @@
 import { Component, HostListener } from '@angular/core';
-import WindowSize from '../core/models/WindowSize.model';
-import { NavbarComponent } from "./navbar/navbar.component";
+import WindowSize from './core/models/WindowSize.model';
+import { NavbarComponent } from "./components/navbar/navbar.component";
 import axios from 'axios';
-import Database from '../core/models/Database.model';
+import Database from './core/models/Database.model';
+import { LoadingComponent } from "./components/loading/loading.component";
+import { LoadingService } from './core/services/loading/loading.service';
+import { BackToTopComponent } from "./components/back-to-top/back-to-top.component";
+import { HeroSectionComponent } from "./components/hero-section/hero-section.component";
+import { ExperienceWithSectionComponent } from "./components/experience-with-section/experience-with-section.component";
+import { ProjectsSectionComponent } from "./components/projects-section/projects-section.component";
+import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
+import { ExperienceSectionComponent } from "./components/experience-section/experience-section.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent],
+  imports: [
+    NavbarComponent,
+    LoadingComponent,
+    BackToTopComponent,
+    HeroSectionComponent,
+    ExperienceWithSectionComponent,
+    ProjectsSectionComponent,
+    ExperienceSectionComponent,
+    FooterComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  isMobile: boolean = false;
-  descriptionFullVisibility: boolean = false;
   windowSize: WindowSize = { width: '100%', height: '100%' };
   backToTopVisibility: boolean = false;
   database: Database = { experiences: [], projects: [] };
-  nowDate: Date = new Date();
 
-  constructor() {
+
+  constructor(private loadingService: LoadingService) {
     this.onResize();
-    this.initSize();
+    loadingService.setVisibility(true);
   }
 
   ngOnInit(): void {
     this.getDatabase();
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        this.loadingService.setVisibility(false);
+      }, 1300);
+      setTimeout(() => {
+        document.body.style.overflow = 'visible';
+      }, 3500);
+    })
   }
 
   updateWindowSize() {
     this.windowSize.width = `${window.innerWidth}px`;
     this.windowSize.height = `${window.innerHeight}px`;
-  }
-
-  initSize() {
-    this.isMobile = window.innerWidth < 768;
-    this.descriptionFullVisibility = !this.isMobile;
   }
 
   initBackToTop() {
@@ -49,7 +70,6 @@ export class AppComponent {
 
   @HostListener('window:resize')
   onResize() {
-    this.initSize();
     this.updateWindowSize();
   }
 

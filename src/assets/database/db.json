@@ -1,9 +1,27 @@
 {
   "projects": [{
-    "imgUrl": "/assets/images/project-thumbnail-2.png",
-    "title": "TestOne",
-    "link": "https://google.com"
-  }],
+      "imgUrl": "/assets/images/project-thumbnail-2.png",
+      "title": "TestOne",
+      "link": "https://google.com"
+    },
+    {
+      "imgUrl": "/assets/images/project-thumbnail-2.png",
+      "title": "TestOne",
+      "link": "https://google.com"
+    }, {
+      "imgUrl": "/assets/images/project-thumbnail-2.png",
+      "title": "TestOne",
+      "link": "https://google.com"
+    }, {
+      "imgUrl": "/assets/images/project-thumbnail-2.png",
+      "title": "TestOne",
+      "link": "https://google.com"
+    }, {
+      "imgUrl": "/assets/images/project-thumbnail-2.png",
+      "title": "TestOne",
+      "link": "https://google.com"
+    }
+  ],
   "experiences": [{
     "iconUrl": "/assets/images/google-logo.png",
     "title": "Lead Software Engineer at Google",

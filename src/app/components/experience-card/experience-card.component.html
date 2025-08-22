@@ -1,0 +1,17 @@
+<article class="flex flex-col w-full" [title]="experience.title">
+  <div class="flex flex-col md:flex-row md:items-center justify-between w-full">
+    <div class="flex items-center">
+      <img [src]="experience.iconUrl" [alt]="experience.title.replaceAll(' ', '-').toLowerCase()"
+        class="w-[32px] h-[32px]" loading="lazy">
+      <h3 class="font-extrabold text-[21px] ms-4">{{ experience.title }}</h3>
+    </div>
+    <time class="text-secondary">
+      {{ experience.time }}
+    </time>
+  </div>
+  <div class="w-full py-10">
+    <p class="text-secondary">
+      {{ experience.description }}
+    </p>
+  </div>
+</article>

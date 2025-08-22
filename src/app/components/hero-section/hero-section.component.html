@@ -1,0 +1,54 @@
+<section class="container flex flex-col items-center px-5 md:px-0">
+
+  <!-- photo -->
+  <div class="flex items-center content-center mt-24">
+    <div class="border-2 border-primary rounded-full p-1">
+      <div class="flex items-center justify-center overflow-hidden rounded-full aspect-square h-[168px]">
+        <img src="assets/images/hossein_mansouri.jpeg" alt="Profile photo of Hossein Mansouri, Full-Stack Developer"
+          title="Hossein Mansouri" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <!-- photo -->
+
+  <!-- title -->
+  <div class="flex flex-col items-center">
+    <h3 class="text-lg mt-6 text-secondary">Hey there,<br> I'm <span class="font-bold text-white text-xl">Hossein
+        Mansouri</span></h3>
+
+    <p class="text-center font-extrabold text-5xl  max-w-[650px] mt-10" style="line-height: 62px;">
+      I do code and<br>
+      make content
+      <span
+        style="background: #FF9100;background: linear-gradient(to right, #FF9100 0%, #7D2EA2 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+        about it!
+      </span>
+    </p>
+
+    <p class="max-w-[300px] md:max-w-[720px] text-center mt-12 text-white text-opacity-70"
+      [class]="isMobile && !descriptionFullVisibility?'overflow-hidden text-ellipsis whitespace-nowrap':null"
+      (click)="this.descriptionFullVisibility=!this.descriptionFullVisibility">
+      I’m a full-stack software engineer with hands-on experience in<br> both frontend and backend development.
+      My strength lies in building modern, scalable web applications using technologies like
+      <strong>Angular</strong>, <strong>NestJS</strong>. <br>
+      I enjoy crafting clean code and intuitive user experiences that solve real-world problems.
+    </p>
+
+    <!-- actions -->
+    <div class="flex flex-col md:flex-row items-center justify-center mt-12">
+      <button class="btn btn-white order-2 md:order-1 mx-3">
+        <a href="#contact">
+          Get In Touch
+        </a>
+      </button>
+      <button class="btn btn-white-outline mb-4 order-1 md:order-2 md:mb-0 mx-3">
+        <a href="/assets/docs/cv.pdf" download="HosseinMansouriCV">
+          Download CV
+        </a>
+      </button>
+    </div>
+    <!-- actions -->
+  </div>
+  <!-- title -->
+
+</section>

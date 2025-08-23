@@ -40,8 +40,6 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.getDatabase();
-
     document.body.style.overflow = 'hidden';
     window.addEventListener('load', () => {
       setTimeout(() => {
@@ -71,23 +69,5 @@ export class AppComponent {
   @HostListener('window:resize')
   onResize() {
     this.updateWindowSize();
-  }
-
-  async getDatabase(): Promise<boolean> {
-    try {
-      const database = await axios.get('/assets/database/db.json');
-
-      if (!database.data) {
-        throw "failed to fetch database!";
-      }
-
-      this.database = database.data as Database;
-
-      return true;
-    } catch (error) {
-      console.debug(error);
-      return false;
-    }
-
   }
 }

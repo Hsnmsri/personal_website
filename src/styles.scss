@@ -184,3 +184,25 @@
     @apply bg-transparent border border-white text-white hover:bg-gray-300 hover:text-dark;
   }
 }
+
+// animations
+@keyframes FadeToTopAnim {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-13px);
+    opacity: 0;
+  }
+}
+
+@keyframes FadeOpacityAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}

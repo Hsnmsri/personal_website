@@ -1,0 +1,7 @@
+.carousel,
+:host ::ng-deep {
+  cursor: grab;
+  user-select: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

@@ -3,10 +3,11 @@ import { ProjectCardComponent } from "../project-card/project-card.component";
 import Project from '../../core/models/Project.model';
 import { Subscription } from 'rxjs';
 import { DatabaseService } from '../../core/services/database/database.service';
+import { DynamicCarouselComponent } from "../dynamic-carousel/dynamic-carousel.component";
 
 @Component({
   selector: 'projects-section',
-  imports: [ProjectCardComponent],
+  imports: [ProjectCardComponent, DynamicCarouselComponent],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })

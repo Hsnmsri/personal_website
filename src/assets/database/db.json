@@ -1,31 +1,44 @@
 {
   "projects": [{
-      "imgUrl": "/assets/images/project-thumbnail-2.png",
-      "title": "TestOne",
-      "link": "https://google.com"
+      "imgUrl": "/assets/images/monitor-lin.jpg",
+      "title": "Monitor-Lin",
+      "link": "https://github.com/Hsnmsri/monitor-lin"
     },
     {
-      "imgUrl": "/assets/images/project-thumbnail-2.png",
-      "title": "TestOne",
-      "link": "https://google.com"
-    }, {
-      "imgUrl": "/assets/images/project-thumbnail-2.png",
-      "title": "TestOne",
-      "link": "https://google.com"
-    }, {
-      "imgUrl": "/assets/images/project-thumbnail-2.png",
-      "title": "TestOne",
-      "link": "https://google.com"
-    }, {
-      "imgUrl": "/assets/images/project-thumbnail-2.png",
-      "title": "TestOne",
-      "link": "https://google.com"
+      "imgUrl": "/assets/images/port-to-port-tunneling.png",
+      "title": "Port To Port Tunneling",
+      "link": "https://github.com/Hsnmsri/server-tunnel"
+    },
+    {
+      "imgUrl": "/assets/images/linux-server-monitoring.png",
+      "title": "Linux Server Monitoring",
+      "link": "https://github.com/Hsnmsri/linux_monitoring"
+    },
+    {
+      "imgUrl": "/assets/images/data-keeper-x.png",
+      "title": "Data Keeper X",
+      "link": "https://github.com/Hsnmsri/data_keeper_x"
+    },
+    {
+      "imgUrl": "/assets/images/local-proxy-logger.png",
+      "title": "Local Proxy Logger",
+      "link": "https://github.com/Hsnmsri/local_proxy_logger_server"
+    },
+    {
+      "imgUrl": "/assets/images/todo-manager.png",
+      "title": "Task Manager (TODO)",
+      "link": "https://github.com/Hsnmsri/taskmanager_backend"
+    },
+    {
+      "imgUrl": "/assets/images/password-generator.png",
+      "title": "Password Generator",
+      "link": "https://github.com/Hsnmsri/PasswordGenerator"
     }
   ],
   "experiences": [{
-    "iconUrl": "/assets/images/google-logo.png",
-    "title": "Lead Software Engineer at Google",
-    "time": "Nov 2019 - Present",
-    "description": "As a Senior Software Engineer at Google, I played a pivotal test One"
+    "iconUrl": "/assets/images/medis-logo.png",
+    "title": "Front-end Developer at Medis Holding",
+    "time": "March 2023 - Now",
+    "description": "I began my journey as a Front-End Developer in March 2023, joining a dynamic and collaborative environment filled with challenging projects and passionate teammates. Throughout my time there, I’ve had the opportunity to grow both technically and personally, occasionally contributing as a Back-End Developer in cross-functional teams. This experience not only strengthened my development skills but also deepened my understanding of the full software development lifecycle"
   }]
 }

@@ -12,6 +12,8 @@ import { ProjectsSectionComponent } from "./components/projects-section/projects
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
 import { ExperienceSectionComponent } from "./components/experience-section/experience-section.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { ContactUsSectionComponent } from "./components/contact-us-section/contact-us-section.component";
+import { BlogSectionComponent } from "./components/blog-section/blog-section.component";
 
 @Component({
   selector: 'app-root',
@@ -23,7 +25,9 @@ import { FooterComponent } from "./components/footer/footer.component";
     ExperienceWithSectionComponent,
     ProjectsSectionComponent,
     ExperienceSectionComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsSectionComponent,
+    BlogSectionComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

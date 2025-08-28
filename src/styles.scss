@@ -159,13 +159,13 @@
 
 // global classes
 @media screen {
-  .no-scroll * {
+  .no-scroll {
     overflow: hidden !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
   }
 
-  .no-scroll *::-webkit-scrollbar {
+  .no-scroll::-webkit-scrollbar {
     display: none !important;
   }
 }

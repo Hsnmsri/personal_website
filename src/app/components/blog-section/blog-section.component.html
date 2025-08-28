@@ -1,0 +1,36 @@
+<div class="flex flex-col items-center overflow-hidden w-full">
+  <!-- blog title -->
+  <div class="w-full flex justify-center py-14">
+    <h2 class="font-extrabold text-[30px] mt-20 text-secondary uppercase">Recent Articles</h2>
+  </div>
+  <!-- blog title -->
+
+  <div class="w-full">
+
+    <!-- conatainer -->
+    <div class="w-full">
+      <dynamic-carousel>
+        <div class="flex items-center justify-start">
+
+          <!-- items -->
+          @for (item of [].constructor(8); track $index) {
+          <blog-post-short-card />
+          }
+          <!-- items -->
+
+        </div>
+      </dynamic-carousel>
+    </div>
+    <!-- conatainer -->
+
+  </div>
+
+  <!-- blog -->
+  <div class="container mt-10 flex justify-end">
+    <div class="flex items-center text-secondary cursor-pointer hover:text-white hover:translate-x-2">
+      <span>Discover all posts</span>
+      <i class="bi bi-arrow-right ms-2"></i>
+    </div>
+  </div>
+  <!-- blog -->
+</div>

@@ -1,7 +1,7 @@
 <section class="container flex flex-col items-center px-5 md:px-0" id="projects">
 
   <!-- projects title -->
-  <div>
+  <div class="mb-8">
     <h2 class="font-extrabold text-[30px] mt-20 text-primary uppercase">Projects</h2>
   </div>
   <!-- projects title -->
@@ -10,13 +10,32 @@
   <article class="w-full">
     <h2 class="absolute w-[1px] h-[1px] p-0 m-[-1px] overflow-hidden whitespace-nowrap border-0"
       style="clip: rect(0, 0, 0, 0);">Projects</h2>
-    <div class="flex flex-wrap justify-center w-full mt-4">
-      @for (project of projects.data; track $index) {
-      <div class="p-3 w-full md:w-1/4">
-        <project-card [project]="project" />
+
+    <div class="relative overflow-hidden w-full select-none">
+      <!-- fade left -->
+      <div class="pointer-events-none absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-dark to-transparent z-10">
       </div>
-      }
+
+      <div class="w-full">
+        <dynamic-carousel>
+          <div class="flex items-center justify-end w-fit">
+            @for (project of projects.data; track $index) {
+            <div class="mx-3 w-full md:min-w-[348px]">
+              <project-card [project]="project" />
+            </div>
+            }
+          </div>
+        </dynamic-carousel>
+      </div>
+
+      <!-- fade right -->
+      <div
+        class="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-dark to-transparent z-10">
+      </div>
     </div>
+
+
+
   </article>
   <!-- project list -->
 

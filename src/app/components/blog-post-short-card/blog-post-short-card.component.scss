@@ -1,0 +1,49 @@
+@media screen {
+  .like-container {
+    @apply hidden;
+    opacity: 0;
+  }
+  .blog-card-img-container {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & .article-title-container > h3 {
+      @apply line-clamp-1 text-xl;
+    }
+    &:hover .article-title-container > h3 {
+      @apply line-clamp-2 font-bold;
+    }
+
+    &:hover {
+      & > div {
+        animation: BlurBackdrop 400ms forwards;
+      }
+
+      .like-container {
+        display: flex;
+        animation: ShowLikeContainer 300ms forwards;
+      }
+    }
+
+    @keyframes ShowLikeContainer {
+      from {
+        display: flex;
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    @keyframes BlurBackdrop {
+      from {
+        backdrop-filter: blur(0);
+      }
+      to {
+        backdrop-filter: blur(4px);
+      }
+    }
+  }
+}

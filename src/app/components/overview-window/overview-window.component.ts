@@ -40,6 +40,7 @@ export class OverviewWindowComponent {
   }
 
   startDrag(e: MouseEvent) {
+    if (!this.window.resize) return;
     this.resizerButton.nativeElement.classList.replace('bg-white', 'bg-primary');
     this.isDragging = true;
     this.dragStartX = e.pageX;

@@ -1,5 +1,6 @@
 export default interface OverviewWindow {
   title?: string;
-  onHide: () => void;
   visibility: boolean;
+  resize: boolean;
+  onHide: () => void;
 }

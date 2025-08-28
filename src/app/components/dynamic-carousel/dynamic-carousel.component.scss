@@ -5,3 +5,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.carousel.dragging ::ng-deep a {
+  pointer-events: none;
+}

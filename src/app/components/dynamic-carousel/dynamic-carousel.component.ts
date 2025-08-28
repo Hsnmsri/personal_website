@@ -14,7 +14,6 @@ export class DynamicCarouselComponent implements AfterViewInit {
   startX = 0;
   scrollLeft = 0;
 
-  // برای inertia
   velocity = 0;
   lastX = 0;
   momentumId: number | null = null;
@@ -47,7 +46,6 @@ export class DynamicCarouselComponent implements AfterViewInit {
     this.scrollLeft = this.carousel.nativeElement.scrollLeft;
     this.lastX = pageX;
 
-    // لغو انیمیشن قبلی
     if (this.momentumId) {
       cancelAnimationFrame(this.momentumId);
       this.momentumId = null;
@@ -57,10 +55,12 @@ export class DynamicCarouselComponent implements AfterViewInit {
   dragEnd() {
     this.isDragging = false;
 
+    // remove dragging class
+    this.carousel.nativeElement.classList.remove('dragging');
     const momentum = () => {
       if (Math.abs(this.velocity) > 0.5) {
         this.carousel.nativeElement.scrollLeft -= this.velocity;
-        this.velocity *= 0.95; // ضریب کاهش سرعت
+        this.velocity *= 0.95;
         this.momentumId = requestAnimationFrame(momentum);
       }
     };
@@ -70,19 +70,20 @@ export class DynamicCarouselComponent implements AfterViewInit {
   dragMove(e: MouseEvent | TouchEvent) {
     if (!this.isDragging) return;
 
+    // add dragging class
+    this.carousel.nativeElement.classList.add('dragging');
+
     let pageX: number;
     if (e instanceof MouseEvent) {
       pageX = e.pageX;
     } else {
       pageX = e.touches[0].pageX;
-      e.preventDefault(); // جلوگیری از اسکرول عمودی پیش‌فرض در موبایل
+      e.preventDefault();
     }
 
     requestAnimationFrame(() => {
       const walk = pageX - this.startX;
       this.carousel.nativeElement.scrollLeft = this.scrollLeft - walk;
-
-      // محاسبه سرعت برای inertia
       this.velocity = pageX - this.lastX;
       this.lastX = pageX;
     });

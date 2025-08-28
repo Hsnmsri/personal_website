@@ -1,0 +1,35 @@
+@keyframes ShowWindowAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ShowWindowBackAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show-animation {
+  animation: ShowWindowAnimation 400ms forwards;
+}
+
+.visible-back-animation {
+  animation: ShowWindowBackAnimation 400ms forwards;
+}
+
+@media screen {
+  .resizer {
+    &:hover > div {
+      @apply bg-opacity-80;
+    }
+  }
+}

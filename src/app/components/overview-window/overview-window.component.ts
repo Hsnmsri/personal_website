@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, SimpleChanges, ViewChild } from '@angular/core';
 import OverviewWindow from '../../core/models/OverviewWindow.model';
 
 @Component({
@@ -12,13 +12,27 @@ export class OverviewWindowComponent {
   @ViewChild('overviewWindow') overveiwWindow!: ElementRef<HTMLDivElement>;
   @ViewChild('resizer') resizer!: ElementRef<HTMLDivElement>;
   @ViewChild('resizerButton') resizerButton!: ElementRef<HTMLDivElement>;
+  visibility: boolean = false;
   isDragging: boolean = false;
   dragStartX: number = 0;
-  sizeAsPercent: number = 0;
+  sizeAsPercent: number = 100;
 
   ngAfterViewInit(): void {
     this.onResize();
     this.resizer.nativeElement.addEventListener('mousedown', (e) => this.startDrag(e))
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['window']) {
+      if (changes['window'].currentValue.visibility) {
+        this.onResize();
+        this.visibility = true;
+      } else {
+        this.visibility = false;
+      }
+
+    }
+    console.log(changes);
   }
 
   @HostListener('window:resize')

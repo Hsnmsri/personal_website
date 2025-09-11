@@ -1,4 +1,5 @@
-<div class="visible-back-animation flex fixed top-0 left-0 w-full h-full bg-secondary/10 backdrop-blur-[1px] z-[99]">
+@if(visibility){
+<div class="md:visible-back-animation flex fixed top-0 left-0 w-full h-full bg-secondary/10 backdrop-blur-[1px] z-[99]">
 
   <div #overviewWindow class="transform-gpu md:border-l md:border-secondary/25 w-full md:ms-auto h-full flex bg-dark"
     [class]="{'show-animation': this.window.visibility, 'hide-animation': !this.window.visibility}"
@@ -45,3 +46,4 @@
   </div>
 
 </div>
+}

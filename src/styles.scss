@@ -5,9 +5,9 @@
 
 // Base Styles
 @media screen {
-  html {
-    scroll-behavior: smooth;
-  }
+  // html {
+  //   scroll-behavior: smooth;
+  // }
 }
 
 // Jetbrain Mono Font
@@ -180,6 +180,22 @@
 
   .btn-white-outline {
     @apply bg-transparent border border-white text-white hover:bg-gray-300 hover:text-dark;
+  }
+}
+
+// inputs
+@media screen {
+  .form-fieldset {
+    @apply flex flex-col mb-4;
+  }
+
+  .form-label {
+    @apply mb-2 text-white font-semibold;
+  }
+
+  input,
+  textarea {
+    @apply bg-dark text-white border border-secondary px-3 py-2 focus:border-white focus:outline-none;
   }
 }
 

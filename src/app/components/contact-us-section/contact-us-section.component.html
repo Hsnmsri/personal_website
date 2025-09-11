@@ -1,5 +1,6 @@
-<section class="w-full flex items-center justify-center z-0">
-  <div class="md:px-8 py-4 flex flex-col md:flex-row rounded-2xl md:rounded-full items-center justify-between w-full max-w-[1100px] contactus-section">
+<section class="w-full flex items-center justify-center z-0" id="contact-us">
+  <div
+    class="md:px-8 py-4 flex flex-col md:flex-row rounded-2xl md:rounded-full items-center justify-between w-full max-w-[1100px] contactus-section">
     <div class="flex flex-col mb-6 md:mb-0">
       <h3>Let’s Build Something Great</h3>
       <small class="text-secondary">
@@ -7,9 +8,17 @@
       </small>
     </div>
     <div>
-      <button class="btn btn-white">
+      <button class="btn btn-white" (click)="contactUsFormWindow.visibility = true">
         Contact Us
       </button>
     </div>
   </div>
 </section>
+
+<!-- contact us form window -->
+@if(contactUsFormWindow.visibility){
+<overview-window [window]="contactUsFormWindow">
+  <contact-us-form />
+</overview-window>
+}
+<!-- contact us form window -->

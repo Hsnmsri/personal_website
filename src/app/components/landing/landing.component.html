@@ -15,7 +15,9 @@
   <div class="w-full flex flex-col items-center bg-dark text-white pt-16" id="home">
 
     <!-- section 1 -->
-    <hero-section />
+    <div class="w-full">
+      <hero-section />
+    </div>
     <!-- section 1 -->
 
     <!-- section 2 -->
@@ -35,15 +37,19 @@
     <!-- section 3 -->
 
     <!-- contact us section -->
+    @if(false){
     <div class="container px-6 md:px-0">
       <contact-us-section />
     </div>
+    }
     <!-- contact us section -->
 
     <!-- blog section -->
+    @if(false){
     <div class="container">
       <blog-section />
     </div>
+    }
     <!-- blog section -->
 
     <!-- footer -->
@@ -62,7 +68,7 @@
   <!-- back to top -->
 
   <!-- loading -->
-  <!-- <app-loading /> -->
+  <app-loading />
   <!-- loading -->
 
 </main>

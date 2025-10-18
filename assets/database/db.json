@@ -36,9 +36,16 @@
     }
   ],
   "experiences": [{
-    "iconUrl": "/assets/images/medis-logo.png",
-    "title": "Front-end Developer at Medis Holding",
-    "time": "March 2023 - Now",
-    "description": "I began my journey as a Front-End Developer in March 2023, joining a dynamic and collaborative environment filled with challenging projects and passionate teammates. Throughout my time there, I’ve had the opportunity to grow both technically and personally, occasionally contributing as a Back-End Developer in cross-functional teams. This experience not only strengthened my development skills but also deepened my understanding of the full software development lifecycle"
-  }]
+      "iconUrl": "/assets/images/chartix-logo.svg",
+      "title": "Front-end Developer at Chartix",
+      "time": "September 2025 - Now",
+      "description": "My journey with Chartix began in September 2025 and marked a unique turning point in my career. Getting involved in developing websites and applications focused on financial market analysis and monitoring gave me a broader and more professional perspective on front-end development. It also allowed me to work with a wider range of tools and technologies. The experience was both challenging and inspiring."
+    },
+    {
+      "iconUrl": "/assets/images/medis-logo.png",
+      "title": "Full-Stack Developer at Medis Holding",
+      "time": "March 2023 - March 2025",
+      "description": "I started my journey as a Full-Stack Developer in March 2023, working in a collaborative and fast-paced environment with challenging projects and talented teammates. Throughout my time there, I’ve actively contributed to both front-end and back-end development across cross-functional teams. This role has strengthened my technical expertise, improved my problem-solving skills, and deepened my understanding of the complete software development lifecycle."
+    }
+  ]
 }

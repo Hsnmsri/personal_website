@@ -3,10 +3,14 @@ import tailwindcss from "@tailwindcss/vite";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
+
   devtools: {
-    enabled: true
+    enabled: false
   },
+
   compatibilityDate: '2025-07-15',
+
+  modules: ['@pinia/nuxt'],
 
   // VITE CONFIG
   vite: {
@@ -19,5 +23,6 @@ export default defineNuxtConfig({
   css: [
     './app/assets/styles/tailwind.css',
     './app/assets/styles/main.scss'
-  ]
+  ],
+
 })

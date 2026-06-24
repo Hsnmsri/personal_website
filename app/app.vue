@@ -18,7 +18,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="font-family-jetbrains">
+  <main class="bg-dark font-family-jetbrains" :style="{ 'height': windowHeight }">
     <!-- LAYOUTS -->
     <NuxtLayout />
     <!-- LAYOUTS -->

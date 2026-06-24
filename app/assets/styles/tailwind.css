@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    /* Font Families */
+    --font-family-jetbrains: "JetBrains Mono", monospace;
+
+    /* Colors - Primary */
+    --color-primary: #FF9100;
+
+    /* Colors - Secondary */
+    --color-secondary: #A2A2A2;
+
+    /* Colors - Dark */
+    --color-dark: #040405;
+}
+
+/* Optional: Add variants if needed */
+@theme inline {
+    /* For dark mode variants */
+    --color-primary-light: #FFA733;
+    --color-primary-dark: #E68200;
+}

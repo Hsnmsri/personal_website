@@ -1,9 +1,7 @@
 import { Component, HostListener } from '@angular/core';
-import WindowSize from '../../core/models/WindowSize.model';
 import Database from '../../core/models/Database.model';
 import { LoadingService } from '../../core/services/loading/loading.service';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { LoadingComponent } from '../loading/loading.component';
 import { BackToTopComponent } from '../back-to-top/back-to-top.component';
 import { HeroSectionComponent } from '../hero-section/hero-section.component';
 import { ExperienceWithSectionComponent } from '../experience-with-section/experience-with-section.component';
@@ -12,12 +10,12 @@ import { ExperienceSectionComponent } from '../experience-section/experience-sec
 import { FooterComponent } from '../footer/footer.component';
 import { ContactUsSectionComponent } from '../contact-us-section/contact-us-section.component';
 import { BlogSectionComponent } from '../blog-section/blog-section.component';
+import { SideNavigatorComponent } from "../side-navigator/side-navigator.component";
 
 @Component({
   selector: 'app-landing',
   imports: [
     NavbarComponent,
-    LoadingComponent,
     BackToTopComponent,
     HeroSectionComponent,
     ExperienceWithSectionComponent,
@@ -25,8 +23,9 @@ import { BlogSectionComponent } from '../blog-section/blog-section.component';
     ExperienceSectionComponent,
     FooterComponent,
     ContactUsSectionComponent,
-    BlogSectionComponent
-  ],
+    BlogSectionComponent,
+    SideNavigatorComponent
+],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })

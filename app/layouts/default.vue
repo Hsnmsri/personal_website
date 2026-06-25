@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full">
+    <div>
 
         <!-- NAVBAR -->
         <header class="fixed z-50 top-0 left-0 right-0 w-full">
@@ -7,7 +7,7 @@
         </header>
         <!-- NAVBAR -->
 
-        <main class="w-full h-full">
+        <main>
             <NuxtPage />
         </main>
 

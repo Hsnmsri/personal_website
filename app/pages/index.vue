@@ -13,5 +13,11 @@ definePageMeta({
         </div>
         <!-- HERO -->
 
+        <!-- EXPERIENCE -->
+        <div>
+            <Experience />
+        </div>
+        <!-- EXPERIENCE -->
+
     </div>
 </template>

@@ -19,5 +19,11 @@ definePageMeta({
         </div>
         <!-- EXPERIENCE -->
 
+        <!-- PROJECTS -->
+        <div class="w-full mt-10">
+            <Projects />
+        </div>
+        <!-- PROJECTS -->
+
     </div>
 </template>

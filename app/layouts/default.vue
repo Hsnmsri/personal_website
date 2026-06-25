@@ -7,7 +7,7 @@
         </header>
         <!-- NAVBAR -->
 
-        <main class="pt-16.25">
+        <main class="w-full h-full">
             <NuxtPage />
         </main>
 

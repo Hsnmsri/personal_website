@@ -7,9 +7,12 @@
     /* Colors - Primary */
     --color-primary: #FF9100;
 
+
     /* Colors - Secondary */
     --color-secondary: #A2A2A2;
 
+    --color-third: #7d2ea2;
+    
     /* Colors - Dark */
     --color-dark: #040405;
 }

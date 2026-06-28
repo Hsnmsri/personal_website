@@ -11,5 +11,11 @@
             <NuxtPage />
         </main>
 
+        <!-- FOOTER -->
+        <footer>
+            <Footer />
+        </footer>
+        <!-- FOOTER -->
+
     </div>
 </template>

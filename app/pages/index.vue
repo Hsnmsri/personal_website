@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-    <div class="w-full h-full">
+    <div class="w-full h-full pt-13 pb-40">
 
         <!-- HERO -->
         <div class="w-full h-full">

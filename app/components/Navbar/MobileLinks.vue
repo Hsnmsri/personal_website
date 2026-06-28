@@ -9,6 +9,14 @@ const appStore = useAppStore();
 function hideMobileLinks() {
     appStore.mobileMenuVisibility = false;
 }
+
+/**
+ * Hide mobile links and show contact modal form
+ */
+function showContactModalForm() {
+    hideMobileLinks();
+    appStore.contactModalVisibility = true;
+}
 </script>
 
 <template>
@@ -71,9 +79,9 @@ function hideMobileLinks() {
                     <!-- CONTACT -->
                     <div class="absolute left-0 right-0 bottom-8">
                         <div class="w-full px-10">
-                            <button class="bg-white/70 py-3 font-bold text-dark rounded-full text-center w-full">
+                            <BaseButton variant="secondary" class="w-full py-3" @click="showContactModalForm()">
                                 Contact Me
-                            </button>
+                            </BaseButton>
                         </div>
                     </div>
                     <!-- CONTACT -->

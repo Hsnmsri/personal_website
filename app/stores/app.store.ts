@@ -2,12 +2,20 @@ export const useAppStore = defineStore('app', () => {
     const mobileBreakpointSize = 768;
     const isMobile = ref<boolean>(window.innerWidth < mobileBreakpointSize);
     const mobileMenuVisibility = ref<boolean>(false);
+    const contactModalVisibility = ref<boolean>(false);
 
     /**
      * Toggle mobile menu visibility
      */
     function toggleMobileMenuVisibility() {
         mobileMenuVisibility.value = !mobileMenuVisibility.value;
+    }
+
+    /**
+     * Toggle contact modal visibility
+     */
+    function toggleContactModal() {
+        contactModalVisibility.value = !contactModalVisibility.value;
     }
 
     /**
@@ -34,6 +42,8 @@ export const useAppStore = defineStore('app', () => {
     return {
         isMobile,
         mobileMenuVisibility,
-        toggleMobileMenuVisibility
+        toggleMobileMenuVisibility,
+        contactModalVisibility,
+        toggleContactModal
     }
 })

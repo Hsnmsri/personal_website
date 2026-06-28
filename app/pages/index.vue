@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 definePageMeta({
     layout: 'default'
 })
@@ -30,6 +30,10 @@ definePageMeta({
             <Experiences />
         </div>
         <!-- EXPERIENCES -->
-         
+
+        <!-- CONTACT MODAL -->
+        <ContactFormModal />
+        <!-- CONTACT MODAL -->
+
     </div>
 </template>

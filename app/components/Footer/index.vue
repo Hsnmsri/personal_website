@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { CircleFadingPlus, Link, Mail, Phone, Send } from '@lucide/vue';
+
+const appStore = useAppStore();
 </script>
 
 <template>
@@ -43,6 +45,18 @@ import { CircleFadingPlus, Link, Mail, Phone, Send } from '@lucide/vue';
                     <a class="ms-2" href="call:+989172433226">+98 (917) 243-3226</a>
                 </div>
                 <!-- phone number -->
+
+                <!-- contact form -->
+                <div class="mt-5 text-secondary">
+                    <p>
+                        <span class="text-[15px] mb-3">Prefer a direct message?</span>
+                        <span class="cursor-pointer text-primary-dark hover:text-primary"
+                            @click="appStore.toggleContactModal()">
+                            Contact form
+                        </span>
+                    </p>
+                </div>
+                <!-- contact form -->
 
                 <!-- other -->
                 <div class="flex flex-wrap md:flex-nowrap w-full">

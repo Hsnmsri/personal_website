@@ -21,7 +21,7 @@ const appStore = useAppStore();
             <div class="flex items-center space-x-10" v-if="!appStore.isMobile">
 
                 <!-- HOME -->
-                <NuxtLink to="#">
+                <NuxtLink to="#home">
                     <NavbarMenuLink>
                         Home
                     </NavbarMenuLink>
@@ -29,7 +29,7 @@ const appStore = useAppStore();
                 <!-- HOME -->
 
                 <!-- PROJECTS -->
-                <NuxtLink to="#">
+                <NuxtLink to="#projects">
                     <NavbarMenuLink>
                         Projects
                     </NavbarMenuLink>
@@ -37,7 +37,7 @@ const appStore = useAppStore();
                 <!-- PROJECTS -->
 
                 <!-- EXPERIENCE -->
-                <NuxtLink to="#">
+                <NuxtLink to="#experiences">
                     <NavbarMenuLink>
                         Experience
                     </NavbarMenuLink>
@@ -45,7 +45,7 @@ const appStore = useAppStore();
                 <!-- EXPERIENCE -->
 
                 <!-- CONTACT -->
-                <NuxtLink to="#">
+                <NuxtLink to="#contact">
                     <NavbarMenuLink>
                         Contact
                     </NavbarMenuLink>

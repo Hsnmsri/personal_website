@@ -21,7 +21,7 @@ const experiences: {
 </script>
 
 <template>
-    <section class="flex flex-col items-center w-full">
+    <section class="flex flex-col items-center w-full" id="experiences">
 
         <!-- experience title -->
         <div class="flex justify-center mb-15 w-full">

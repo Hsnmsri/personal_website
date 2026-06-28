@@ -2,6 +2,13 @@
 import { X } from '@lucide/vue';
 
 const appStore = useAppStore();
+
+/**
+ * Hide mobile menu visibility 
+ */
+function hideMobileLinks() {
+    appStore.mobileMenuVisibility = false;
+}
 </script>
 
 <template>
@@ -27,7 +34,7 @@ const appStore = useAppStore();
                     <div class="flex flex-col space-y-6">
 
                         <!-- HOME -->
-                        <NuxtLink to="#">
+                        <NuxtLink to="#home" @click="hideMobileLinks()">
                             <NavbarMenuLink>
                                 Home
                             </NavbarMenuLink>
@@ -35,7 +42,7 @@ const appStore = useAppStore();
                         <!-- HOME -->
 
                         <!-- PROJECTS -->
-                        <NuxtLink to="#">
+                        <NuxtLink to="#projects" @click="hideMobileLinks()">
                             <NavbarMenuLink>
                                 Projects
                             </NavbarMenuLink>
@@ -43,7 +50,7 @@ const appStore = useAppStore();
                         <!-- PROJECTS -->
 
                         <!-- EXPERIENCE -->
-                        <NuxtLink to="#">
+                        <NuxtLink to="#experiences" @click="hideMobileLinks()">
                             <NavbarMenuLink>
                                 Experience
                             </NavbarMenuLink>
@@ -51,7 +58,7 @@ const appStore = useAppStore();
                         <!-- EXPERIENCE -->
 
                         <!-- CONTACT -->
-                        <NuxtLink to="#">
+                        <NuxtLink to="#contact" @click="hideMobileLinks()">
                             <NavbarMenuLink>
                                 Contact
                             </NavbarMenuLink>

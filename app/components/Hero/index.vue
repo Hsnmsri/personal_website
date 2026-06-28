@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full">
+    <div class="w-full h-full" id="home">
 
         <!-- HERO SECTION -->
         <section class="flex flex-col items-center px-5 md:px-0">

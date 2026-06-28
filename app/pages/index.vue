@@ -30,6 +30,6 @@ definePageMeta({
             <Experiences />
         </div>
         <!-- EXPERIENCES -->
-
+         
     </div>
 </template>

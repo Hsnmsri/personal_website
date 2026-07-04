@@ -1,7 +1,7 @@
 <template>
-  <main class="bg-dark text-white font-family-jetbrains">
-    <!-- LAYOUTS -->
-    <NuxtLayout />
-    <!-- LAYOUTS -->
-  </main>
+    <main class="bg-dark text-white font-family-jetbrains">
+        <NuxtLayout>
+            <NuxtPage />
+        </NuxtLayout>
+    </main>
 </template>

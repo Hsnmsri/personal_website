@@ -8,7 +8,7 @@
         <!-- NAVBAR -->
 
         <main>
-            <NuxtPage />
+            <slot />
         </main>
 
         <!-- FOOTER -->

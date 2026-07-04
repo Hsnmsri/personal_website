@@ -1,37 +1,28 @@
 export const useAppStore = defineStore('app', () => {
     const mobileBreakpointSize = 768;
-    const isMobile = ref<boolean>(window.innerWidth < mobileBreakpointSize);
+    const isMobile = ref<boolean>(false);
     const mobileMenuVisibility = ref<boolean>(false);
     const contactModalVisibility = ref<boolean>(false);
 
-    /**
-     * Toggle mobile menu visibility
-     */
+    if (import.meta.client) {
+        isMobile.value = window.innerWidth < mobileBreakpointSize;
+    }
+
     function toggleMobileMenuVisibility() {
         mobileMenuVisibility.value = !mobileMenuVisibility.value;
     }
 
-    /**
-     * Toggle contact modal visibility
-     */
     function toggleContactModal() {
         contactModalVisibility.value = !contactModalVisibility.value;
     }
 
-    /**
-     * On window resize event handler
-     */
     function onWindowResize() {
-        // CHECK MOBILE MENU VISIBILITY
         if (window.innerWidth >= mobileBreakpointSize) {
             mobileMenuVisibility.value = false;
         }
-
-        // IS MOBILE
         isMobile.value = window.innerWidth < mobileBreakpointSize;
     }
 
-    // WEBHOOKS
     onMounted(() => {
         window.addEventListener('resize', () => onWindowResize())
     })

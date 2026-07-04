@@ -14,9 +14,7 @@ async function submit() {
     isSubmitting.value = true;
 
     try {
-        // TODO: Replace with your actual API endpoint
-        // await $fetch('/api/contact', { method: 'POST', body: form.value });
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await $fetch('/api/contact', { method: 'POST', body: form.value });
         isSubmitted.value = true;
     } catch {
         // Handle error

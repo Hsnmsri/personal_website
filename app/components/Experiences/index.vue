@@ -1,23 +1,13 @@
 <script setup lang="ts">
-const experiences: {
+interface Experience {
     title: string;
-    image: string;
-    time: string;
+    company: string;
+    image: string | null;
+    time_period: string;
     description: string;
-}[] = [
-        {
-            title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-            image: "fuck",
-            time: "fuck",
-            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        },
-        {
-            title: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-            image: "fuck",
-            time: "fuck",
-            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit",
-        }
-    ]
+}
+
+const { data: experiences, pending } = useFetch<Experience[]>('/api/experiences')
 </script>
 
 <template>
@@ -31,10 +21,12 @@ const experiences: {
 
         <div class="container flex flex-col space-y-10">
 
-            <template v-for="item in experiences" :key="item.title">
+            <template v-if="pending">
+                <p class="text-secondary text-center">Loading experiences...</p>
+            </template>
+            <template v-else v-for="item in experiences" :key="item.title">
                 <div class="w-full">
-                    <ExperiencesItem :title="item.title" :image="item.image" :time="item.time"
-                        :description="item.description" />
+                    <ExperiencesItem :title="item.title" :image="item.image || ''" :time="item.time_period" :description="item.description" />
                 </div>
             </template>
 

@@ -1,25 +1,11 @@
 <script setup lang="ts">
-const items: {
+interface Project {
     title: string;
     description: string;
     link: string;
-}[] = [
-        {
-            title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit',
-            link: 'http://localhost'
-        },
-        {
-            title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit',
-            link: 'http://localhost'
-        },
-        {
-            title: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-            description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit',
-            link: 'http://localhost'
-        }
-    ]
+}
+
+const { data: items, pending } = useFetch<Project[]>('/api/projects')
 </script>
 
 <template>
@@ -33,7 +19,10 @@ const items: {
 
         <div class="container flex flex-col space-y-10">
             <!-- ITEMS -->
-            <template v-for="item in items">
+            <template v-if="pending">
+                <p class="text-secondary text-center">Loading projects...</p>
+            </template>
+            <template v-else v-for="item in items">
                 <div class="w-full">
                     <ProjectsItem :title="item.title" :description="item.description" :link="item.link" />
                 </div>

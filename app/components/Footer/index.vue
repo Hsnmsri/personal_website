@@ -2,6 +2,13 @@
 import { CircleFadingPlus, Link, Mail, Phone, Send } from '@lucide/vue';
 
 const appStore = useAppStore();
+const { data: settings } = useSettings();
+
+const email = computed(() => settings.value?.email || '')
+const phone = computed(() => settings.value?.phone || '')
+const instagram = computed(() => settings.value?.instagram || '')
+const telegram = computed(() => settings.value?.telegram || '')
+const linkedin = computed(() => settings.value?.linkedin || '')
 </script>
 
 <template>
@@ -33,7 +40,7 @@ const appStore = useAppStore();
                     <div class="pb-0.5">
                         <Mail :size="20" />
                     </div>
-                    <a class="ms-2" href="mailto:hsnmsri82@gmail.com">hsnmsri82&#64;gmail.com</a>
+                    <a class="ms-2" :href="`mailto:${email}`">{{ email }}</a>
                 </div>
                 <!-- email -->
 
@@ -42,7 +49,7 @@ const appStore = useAppStore();
                     <div class="pb-0.5">
                         <Phone :size="20" />
                     </div>
-                    <a class="ms-2" href="call:+989172433226">+98 (917) 243-3226</a>
+                    <a class="ms-2" :href="`call:${phone}`">{{ phone }}</a>
                 </div>
                 <!-- phone number -->
 
@@ -61,23 +68,23 @@ const appStore = useAppStore();
                 <!-- other -->
                 <div class="flex flex-wrap md:flex-nowrap w-full">
                     <div class="flex items-center text-secondary mt-8 text-[18px]">
-                        <a href="https://instagram.com/humansouri" target="_blank"
+                        <a :href="`https://instagram.com/${instagram}`" target="_blank"
                             class="flex items-center hover:text-white">
                             <div class="pb-0.5">
                                 <CircleFadingPlus :size="20" />
                             </div>
-                            <span class="text-[15px] ms-2">humansouri</span>
+                            <span class="text-[15px] ms-2">{{ instagram }}</span>
                         </a>
                     </div>
                     <div class="flex items-center text-secondary mt-8 text-[18px] ms-3">
-                        <a href="https://t.me/humansouri" target="_blank" class="hover:text-white">
+                        <a :href="`https://t.me/${telegram}`" target="_blank" class="hover:text-white">
                             <div class="pb-0.5">
                                 <Send :size="20" />
                             </div>
                         </a>
                     </div>
                     <div class="flex items-center text-secondary mt-8 text-[18px] ms-5">
-                        <a href="https://www.linkedin.com/in/hossein-mansouri-11169a230" target="_blank"
+                        <a :href="linkedin" target="_blank"
                             class="hover:text-white">
                             <div class="pb-0.5">
                                 <Link :size="20" />

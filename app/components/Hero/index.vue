@@ -1,3 +1,17 @@
+<script setup lang="ts">
+const { data: settings } = useSettings()
+
+const fullName = computed(() => settings.value?.full_name || 'Hossein Mansouri')
+const bio = computed(() => settings.value?.bio || '')
+const cvUrl = computed(() => settings.value?.cv_url || '')
+
+function downloadCv() {
+    if (import.meta.client && cvUrl.value) {
+        window.location.href = cvUrl.value
+    }
+}
+</script>
+
 <template>
     <div class="w-full h-full" id="home">
 
@@ -19,9 +33,8 @@
 
                         <!-- title -->
                         <div class="flex flex-col items-center">
-                            <h3 class="text-lg mt-6 text-secondary">Hey there,<br> I'm <span
-                                    class="font-bold text-white text-xl">Hossein
-                                    Mansouri</span></h3>
+                            <h1 class="text-lg mt-6 text-secondary">Hey there,<br> I'm <span
+                                    class="font-bold text-white text-xl">{{ fullName }}</span></h1>
 
                             <p class="text-center font-extrabold text-5xl max-w-162.5 mt-10" style="line-height: 62px;">
                                 I do code and<br>
@@ -33,7 +46,7 @@
                             </p>
 
                             <div class="mt-12">
-                                <HeroDescription />
+                                <HeroDescription :bio="bio" />
                             </div>
 
                             <!-- actions -->
@@ -48,11 +61,9 @@
                                 <!-- CONTACT -->
 
                                 <!-- DOWNLOAD CV -->
-                                <a href="/assets/docs/cv.pdf" download="HosseinMansouriCV">
-                                    <BaseButton variant="white-outline">
-                                        Download CV
-                                    </BaseButton>
-                                </a>
+                                <BaseButton v-if="cvUrl" variant="white-outline" class="cursor-pointer" @click="downloadCv">
+                                    Download CV
+                                </BaseButton>
                                 <!-- DOWNLOAD CV -->
                             </div>
                             <!-- actions -->

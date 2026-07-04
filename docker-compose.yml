@@ -1,0 +1,10 @@
+services:
+  personal-website:
+    # build: .
+    # container_name: personal-website
+    image: personal-website:1.0.0
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./data:/app/.data
+    restart: unless-stopped

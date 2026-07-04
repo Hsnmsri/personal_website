@@ -1,0 +1,9 @@
+@import "./font.scss";
+
+* {
+    @apply font-family-jetbrains;
+}
+
+html{
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /admin
+Allow: /
+
+Sitemap: https://hosseinmansouri.ir/sitemap.xml
